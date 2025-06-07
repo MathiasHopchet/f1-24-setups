@@ -1,0 +1,5 @@
+{
+  "name": "F1 24 Setup & Strategy Hub",
+  "description": "An AI-powered web application to generate F1 24 car setups and race strategies using Google Gemini. Users can select tracks, weather conditions, and other parameters to get customized advice.",
+  "requestFramePermissions": []
+}

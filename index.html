@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 24 Setup & Strategy Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'f1-dark': '#18181B', // Zinc 900
+            'f1-light-dark': '#27272A', // Zinc 800
+            'f1-text': '#F4F4F5', // Zinc 100
+            'f1-text-darker': '#A1A1AA', // Zinc 400
+            'f1-accent-red': '#DC2626', // Red 600
+            'f1-accent-blue': '#2563EB', // Blue 600
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0px)' },
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.5s ease-in-out',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    /* Additional global styles or overrides if absolutely necessary, though prefer config */
+    body {
+      font-family: 'Inter', sans-serif; /* Example: Using a common sans-serif font */
+    }
+    /* For Tailwind to pick up fonts from CDN, ensure they are loaded if not web-safe */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "@netlify/functions": "https://esm.sh/@netlify/functions@^4.1.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-f1-dark">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
